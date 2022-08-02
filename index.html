@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
+    <head>
+        <script>
+            function greeting(){
+                let name=prompt('Enter your name: ')
+                document.getElementById('demo').innerHTML='Hello '+name;
+                window.alert('Hello '+name);
+            }
+            function changeRed(){
+                document.getElementById('demo').style.color='red';
+
+            }
+            function changepictopunch(){
+                document.getElementById('pic').src="pepe2.jpg";
+                document.getElementById('pic').style.width="100px";
+                document.getElementById('pic').style.height="100px";
+            }
+            function changepictocharge(){
+                document.getElementById('pic').src="pepe1.png";
+                document.getElementById('pic').style.width="100px";
+                document.getElementById('pic').style.height="100px";
+            } 
+        </script>
+    </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-<img src=" https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=681&h=383&crop=1"></img>
+<h2>My First JavaScript</h2>
+<img id="pic" src="pepe1.png" ><br>
+<button type="button" onclick="greeting()">
+Click me to display Date and Time.</button>
+<button type="button" onclick="changeRed()">
+Click to change color.</button><br>
+<button type="button" onclick="changepictocharge()">
+Click to charge.</button><br>
+<button type="button" onclick="changepictopunch()">
+Click to punch.</button>
+</img>
+<p id="demo"></p>
 
-<img src="https://pbs.twimg.com/media/Dt27JgNXcAAwhnz?format=jpg&name=900x900"><img>
 </body>
-</html>
+</html> 
