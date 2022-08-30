@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let is_show=false;
+            let Ary_Product = [
+            {
+                id: "01",
+                name: "Chahan",
+                price: "59B.",
+                img: "product_pic/chahan.jpg",
+            },
+            {
+                id: "02",
+                name: "Karaage",
+                price: "59B.",
+                img: "product_pic/Karaage.jpg",
+            },
+            {
+                id: "03",
+                name: "Karaage",
+                price: "69B.",
+                img: "product_pic/Gyoza.jpg",
+            },
+            {
+                id: "04",
+                name: "Yakisoba",
+                price: "79B.",
+                img: "product_pic/yakisoba.jpg",
+            },
+            {
+                id: "05",
+                name: "Miso Ramen",
+                price: "89B.",
+                img: "product_pic/miso.jpg",
+            },
+            {
+                id: "06",
+                name: "Shio Ramen",
+                price: "79B.",
+                img: "product_pic/Shio.jpg",
+            },
+            {
+                id: "07",
+                name: "Shoyu Ramen",
+                price: "79B.",
+                img: "product_pic/shoyu.jpg",
+            },
+            {
+                id: "08",
+                name: "Tonkotsu Ranen",
+                price: "79B.",
+                img: "product_pic/tonkotsu.jpg",
+            },
+            {
+                id: "09",
+                name: "Sarusoba",
+                price: "69B.",
+                img: "product_pic/Zarusoba.jpg",
+            },
+            {
+                id: "10",
+                name: "Tempura Shiyu Ramen",
+                price: "109B.",
+                img: "product_pic/tempura_shoyu.jpg",
+            },
+            ];
+            function show(order){
+
+                document.getElementById('demo').innerHTML+=`<br>ID:${order.id}|name:${order.name}|\tprice:${order.price} \t<img src="${order.img}" width="100px" height="100px">`;
+            }
+            function press(){
+                if(is_show==false)
+                {
+                    document.getElementById('demo').innerHTML+='My Product';
+                    for (const x of Ary_Product) {
+                    show(x);
+                    is_show=true;
+                    }   
+                }
+                else
+                {
+                    document.getElementById('demo').innerHTML="";
+                    is_show=false;
+                }
+            }
+        </script>
+    </head>
+<body>
+
+<h2>My Product</h2>
+<button type="button" onclick="press()">
+    Click me to display Product List.</button>
+<p id="demo"></p>
+</body>
+</html> 
